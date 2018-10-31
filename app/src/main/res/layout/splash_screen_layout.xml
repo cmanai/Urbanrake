@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:wheel="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/splash_screen_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary">
+
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/circular"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            wheel:matProg_circleRadius="62dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            wheel:matProg_barWidth="2dp"
+            wheel:matProg_barColor="#fff"
+            wheel:matProg_progressIndeterminate="true"/>
+
+
+    <TextView
+            android:id="@+id/Copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/md_white_1000"
+            android:text="© Urbanrake"
+            android:textSize="14sp"
+            />
+
+
+    <ImageView
+            android:layout_width="130dp"
+            android:id="@+id/logo"
+            android:layout_margin="20dp"
+            android:layout_height="130dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/icon_urbanrake_splash_screen"/>
+
+
+    <!-- <ImageView
+             android:id="@+id/Name_App"
+             android:layout_width="wrap_content"
+             android:layout_height="80dp"
+             android:gravity="center"
+             android:layout_below="@+id/logo"
+             android:textColor="@color/md_white_1000"
+             android:src="@drawable/title_splash"
+             android:textColorLink="@color/colorPrimary"
+             android:layout_alignTop="@+id/logo"
+             android:layout_centerHorizontal="true"
+             android:layout_marginTop="90dp"/>-->
+
+</RelativeLayout>

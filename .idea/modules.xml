@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Urbanrake.iml" filepath="$PROJECT_DIR$/Urbanrake.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appintrolibrary/appintrolibrary.iml" filepath="$PROJECT_DIR$/appintrolibrary/appintrolibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webviewlibrary/webviewlibrary.iml" filepath="$PROJECT_DIR$/webviewlibrary/webviewlibrary.iml" />
+    </modules>
+  </component>
+</project>

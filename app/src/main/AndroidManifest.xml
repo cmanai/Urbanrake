@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+
+          package="com.urbanrake.app">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/icon_urbanrake"
+            android:label="@string/app_name"
+            android:roundIcon="@drawable/icon_urbanrake"
+            android:supportsRtl="true"
+            tools:replace="android:icon">
+        <activity
+                android:screenOrientation="portrait"
+                android:name=".SplashScreenActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:theme="@style/AppTheme"
+                android:screenOrientation="portrait"
+                android:name=".HomeActivity"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="@string/title_activity_home"
+                >
+        </activity>
+        <activity
+                android:screenOrientation="portrait"
+
+                android:name=".IntroActivity"
+                android:label="@string/title_intro_activity"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+                />
+        <activity
+                android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
+                android:configChanges="keyboardHidden|orientation|screenSize"
+                android:screenOrientation="portrait"
+
+                android:theme="@style/FinestWebViewTheme.Light"/>
+
+        <activity
+                android:theme="@style/AppTheme"
+                android:screenOrientation="portrait"
+                android:name=".HomeActivityFromLink"
+                android:configChanges="orientation|keyboardHidden|screenSize"
+                android:label="@string/title_activity_home_from_link">
+
+            <intent-filter>
+                <!-- Sets the intent action to view the activity -->
+                <action android:name="android.intent.action.VIEW"/>
+                <!-- Allows the link to be opened from a web browser -->
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <!-- Allows the deep link to be used without specifying the app name -->
+                <category android:name="android.intent.category.DEFAULT"/>
+                <!--     &lt;!&ndash; URI tutsplus://deeplink &ndash;&gt;
+                     <data
+                             android:scheme="tutsplus"
+                             android:host="deeplink"/>-->
+                <!-- URI http://qa.urbanrake.com -->
+                <data
+                        android:scheme="https"
+                        android:host="www.urbanrake.com"/>
+                <data
+                        android:scheme="http"
+                        android:host="www.urbanrake.com"/>
+
+
+            </intent-filter>
+
+        </activity>
+
+
+        <meta-data
+                android:name="android.webkit.WebView.EnableSafeBrowsing"
+                android:value="true"/>
+    </application>
+
+
+</manifest>
